@@ -4,11 +4,11 @@
 # Import modules for CGI handling 
 import cgi, cgitb 
 import sqlite3
+import json
 
-#conn = sqlite3.connect('name.db')
-
-# Create instance of FieldStorage 
 form = cgi.FieldStorage() 
+
+data = {}
 
 # Get data from fields
 email = form.getvalue('email')
@@ -23,6 +23,25 @@ conn.execute("INSERT INTO Query  \
 
 conn.commit()
 
+data['Email'] = email
+data['Query'] = query
+data['Name'] = name
+
+i=0
+
+
+with open('data.json') as f:
+	datas=json.load(f)		
+for key in datas:
+	i=i+1
+i=1+i	
+
+a_dict={i:data}
+datas.update(a_dict)
+with open('data.json','w') as f:
+	json.dump(datas,f)
+
+
 print("Content-type:text/html\r\n\r\n")
 print("<html>")
 print("<head>")
@@ -30,22 +49,8 @@ print("<title>Hello - Stats</title>")
 print("</head>")
 print("<body>")
 print("<h2>Hello %s </h2>" % (name))
-
-# s="<table border='1' cellspacing='0' cellpadding='10'>"
-# cursor = conn.execute("SELECT FIRSTNAME,LASTNAME,PHONENO,EMAILID,PASSWORD from CUSTOMER")
-# for row in cursor:
-# 	s+="<tr>"
-# 	s+="<td>"+str(row[0])+"</td>"
-# 	s+="<td>"+str(row[1])+"</td>"
-# 	s+="<td>"+str(row[2])+"</td>"
-# 	s+="<td>"+str(row[3])+"</td>"
-# 	s+="<td>"+str(row[4])+"</td>"
-# 	s+="</tr>"
-# s+="</table>"	
-
-# print("<p> %s </p>" % (s,))   
 conn.close()
-print("<a href=\"http://localhost/contact.html\" id=\"za\"> Click me </a>")
+print("<a href=\"http://localhost/index.html\" id=\"za\"> Click me </a>")
 print("<script type=\"text/javascript\"> document.getElementById('za').click() </script>")
 
 print("</body>")
