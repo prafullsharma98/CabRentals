@@ -40,26 +40,25 @@ pay=str(int(price)*int(days))
 
 print("<p> %s </p>" % (pay,))
 
-carid  = str(carid)
-name  = str(name)
-emailid  = str(emailid)
-fromdate  = str(fromdate)
-todate = str(todate)
-days  = str(days)
-adddress  = str(adddress)
-state  = str(state)
-ptime =str(ptime)
-dtime = str(dtime)
-pay=str(pay)
+# carid  = str(carid)
+# name  = str(name)
+# emailid  = str(emailid)
+# fromdate  = str(fromdate)
+# todate = str(todate)
+# days  = str(days)
+# adddress  = str(adddress)
+# state  = str(state)
+# ptime =str(ptime)
+# dtime = str(dtime)
+# pay=str(pay)
 
 
 
-print("<p> %s %s %s %s %s %s %s %s %s %s %s</p>" % (name,emailid,carid,fromdate,todate,days,address,state,ptime,dtime,pay))
+print("<p> %s </p>" % (dtime,))
 
 
-# conn.execute("INSERT INTO PAYMENT(NAME,EMAILID,CARID,FROMDATE,TODATE,DAYS,ADDRESS,STATE,PICKUPTIME,DROPOFFTIME,PAY) VALUES (?,?,?,?,?,?,?,?,?,?,?)",(name,emailid,carid,fromdate,todate,days,address,state,ptime,dtime,pay))
-
-# conn.commit()
+conn.execute("INSERT INTO PAYMENT(NAME,EMAILID,CARID,FROMDATE,TODATE,DAYS,ADDRESS,STATE,PICKUPTIME,DROPOFFTIME,PAY) VALUES (?,?,?,?,?,?,?,?,?,?,?)",(name,emailid,carid,fromdate,todate,days,address,state,ptime,dtime,pay))
+conn.commit()
 
 print("<p>rec added</p>")
 
