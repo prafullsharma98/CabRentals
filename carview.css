@@ -1,0 +1,50 @@
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+h2{
+    background-color: red;
+}
+
+
+
+/*s1="#customers {"
+
+s1+="font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;"
+s1+="border-collapse: collapse;"
+s1+="width: 100%;}"
+*/
+
+/*s1+="#customers td, #customers th {"
+s1+="border: 1px solid #ddd;"
+s1+="padding: 8px;}"
+
+s1+="#customers tr:nth-child(even){background-color: #f2f2f2;}"
+
+s1+="#customers tr:hover {background-color: #ddd;}"*/
+
+/*s1+="#customers th {"
+   s1+= "padding-top: 12px;"
+    s1+="padding-bottom: 12px;"
+    s1+="text-align: left;"
+    s1+="background-color: #4CAF50;"
+    s1+="color: white;}"*/
