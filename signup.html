@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<title>demo web file python</title>
+
+<script type="text/javascript">
+  function check()
+  {
+    fname=document.getElementById("fn").value
+
+    if(/[0-9]/.test(fname))
+            {document.getElementById('fn').style.backgroundColor="#e2483d";}
+            
+    else{
+            document.getElementById('fn').style.backgroundColor="green";
+            document.getElementById('sub').click();
+            
+        }
+
+       
+  }
+</script>
+</head>
+<body>
+<form name="signupform" method="POST" action="/cgi-bin/signup.py">
+ 
+  <table border="0" cellspacing="0" cellpadding="10">
+  	<tr>
+  		<td>First Name</td>
+  		<td><input type="text" name="fname" id="fn" placeholder="First name"></td>
+  	</tr>
+  	<tr>
+  		<td>last Name</td>
+  		<td><input type="text" name="lname" placeholder="last name"></td>
+  	</tr>
+  	<tr>
+  		<td>Gender</td>
+  		<td>Male:<input type="radio" name="gender" value="male">Female:<input type="radio" name="gender" value="female"></td>
+  	</tr>
+  	<tr>
+  		<td>Caste</td>
+  		<td><select name="caste">
+			  <option disabled>-select-</option>
+			  <option value="general">general</option>
+			  <option value="sc/st">sc/st</option>
+			  <option value="obc">obc</option>
+			</select></td>
+  	</tr>
+  	<tr>
+  		<td>disabled?</td>
+  		<td><input type="checkbox" name="disabled"></td>
+  	</tr>
+  	
+  </table>
+  
+  
+  <input type="submit" value="Hi" id="sub" hidden/>
+
+</form>
+<button onclick="check()" >Submit</button>
+  
+ 
+</body>
+</html>
