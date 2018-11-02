@@ -13,20 +13,18 @@ print("Opened database successfully");
 #          CARID INTEGER,
 #          FROMDATE TEXT,
 #          TODATE TEXT,
-#          DAYS INTEGER,
+#          DAYS TEXT,
 #          ADDRESS TEXT,
 #          STATE TEXT,
 #          PICKUPTIME TEXT,
 #          DROPOFFTIME TEXT,
-#          PAY REAL,
-#          FOREIGN KEY(EMAILID) REFERENCES CUSTOMER(EMAILID),
-#          FOREIGN KEY(CARID) REFERENCES CAR(ID));''')
+#          PAY REAL);''')
 
 # conn.commit()
 # print(" payTable created successfully");
 
-name="tarun"
-emailid="sm@gmail.com"
+name="rikaaa"
+emailid="tanujm@gmail.com"
 fromdate="2018-11-19"
 todate="2018-11-29"
 days="10"
@@ -40,6 +38,7 @@ carid="6"
 conn.execute("INSERT INTO PAYMENT(NAME,EMAILID,CARID,FROMDATE,TODATE,DAYS,ADDRESS,STATE,PICKUPTIME,DROPOFFTIME,PAY) VALUES (?,?,?,?,?,?,?,?,?,?,?)",(name,emailid,carid,fromdate,todate,days,address,state,ptime,dtime,pay))
 conn.commit()
 
-print("rec ")
+
+print("recs enetered babay ")
 
 conn.close()
