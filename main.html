@@ -51,19 +51,19 @@
         <table border="0" cellspacing="0" cellpadding="10">
           <tr>
               <td rowspan="7"><img src="https://s3.envato.com/files/195496683/India-Map-States-Colored.jpg" alt="mahe" usemap="#mahe" ><map name="mahe">
-          <area shape="poly" coords="93,391,123,355,257,369,249,430,207,405,113,495"   onmouseover ="document.getElementById('textbar').value='Maharashtra'" >
-          <area shape="poly" coords="21,305,101,308,104,356,50,374" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Gujrat'">
-          <area shape="poly" coords="69,277,77,220,125,185,173,247,139,286,149,314" alt="ab5"  onmouseover ="document.getElementById('textbar').value='Rajasthan'">
-          <area shape="poly" coords="155,183,184,173,185,197,168,210" alt="ab5" onmouseover ="document.getElementById('textbar').value='Haryana'">
-          <area shape="poly" coords="132,171,142,149,158,131,175,165" alt="ab5"  onmouseover ="document.getElementById('textbar').value='Punjab'"> 
-          <area shape="poly" coords="183,206,186,201,189,207,186,210" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Delhi'">
-          <area shape="poly" coords="164,125,192,111,221,146,201,147,190,160,180,145" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Himachal Pradesh'">
-          <area shape="poly" coords="180,100,126,97,116,22,198,52,244,45,201,104" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Jammu and Kashmir'">
-          <area shape="poly" coords="200,167,227,144,261,168,244,196" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Uttarakhand'">
-          <area shape="poly" coords="193,177,321,239,310,284,313,303,226,276,227,244,196,228" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Uttar Pradesh'">
-          <area shape="poly" coords="177,273,219,251,208,277,206,306,229,306,223,285,295,299,252,361,124,348,138,321,188,305,192,276" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Madhya Pradesh'">
-          <area shape="poly" coords="" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Gujrat'">
-          <area shape="poly" coords="21,305,101,308,104,356,50,374" alt="ab1"  onmouseover ="document.getElementById('textbar').value='Gujrat'">
+          <area shape="poly" coords="93,391,123,355,257,369,249,430,207,405,113,495"   onclick = "document.getElementById('textbar').value='Maharashtra'" >
+          <area shape="poly" coords="21,305,101,308,104,356,50,374" alt="ab1"  onclick = "document.getElementById('textbar').value='Gujrat'">
+          <area shape="poly" coords="69,277,77,220,125,185,173,247,139,286,149,314" alt="ab5"  onclick = "document.getElementById('textbar').value='Rajasthan'">
+          <area shape="poly" coords="155,183,184,173,185,197,168,210" alt="ab5" onclick = "document.getElementById('textbar').value='Haryana'">
+          <area shape="poly" coords="132,171,142,149,158,131,175,165" alt="ab5"  onclick = "document.getElementById('textbar').value='Punjab'"> 
+          <area shape="poly" coords="183,206,186,201,189,207,186,210" alt="ab1"  onclick = "document.getElementById('textbar').value='Delhi'">
+          <area shape="poly" coords="164,125,192,111,221,146,201,147,190,160,180,145" alt="ab1"  onclick = "document.getElementById('textbar').value='Himachal Pradesh'">
+          <area shape="poly" coords="180,100,126,97,116,22,198,52,244,45,201,104" alt="ab1"  onclick = "document.getElementById('textbar').value='Jammu and Kashmir'">
+          <area shape="poly" coords="200,167,227,144,261,168,244,196" alt="ab1"  onclick = "document.getElementById('textbar').value='Uttarakhand'">
+          <area shape="poly" coords="193,177,321,239,310,284,313,303,226,276,227,244,196,228" alt="ab1"  onclick = "document.getElementById('textbar').value='Uttar Pradesh'">
+          <area shape="poly" coords="177,273,219,251,208,277,206,306,229,306,223,285,295,299,252,361,124,348,138,321,188,305,192,276" alt="ab1"  onclick = "document.getElementById('textbar').value='Madhya Pradesh'">
+          <area shape="poly" coords="" alt="ab1"  onclick = "document.getElementById('textbar').value='Gujrat'">
+          <area shape="poly" coords="21,305,101,308,104,356,50,374" alt="ab1"  onclick = "document.getElementById('textbar').value='Gujrat'">
 
           <!-- <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
           <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm"> -->
@@ -80,21 +80,18 @@
               <td> <input type="date"  id="fromDate"></td>
               </tr>
                <tr>
-              <td class="field">to date:</td>
+              <td class="field">To date:</td>
                <td> <input type="date"  id="toDate"></td>
               </tr>
                <tr>
-              <td class="field">pickup time:</td>
+              <td class="field">Pickup time:</td>
                <td> <input type="time"  ></td>
               </tr>
                <tr>
-              <td class="field">drop off time</td>
+              <td class="field">Drop off time</td>
                <td> <input type="time" name="state" ></td>
               </tr>
-               <tr>
-              <td class="field">car id:</td>
-               <td><input type="text" name="state"><br><br><input type="button" class="btn btn-primary btn-lg" value="View Cars" onclick="location.href = 'http://localhost/cgi-bin/carview.py';"></td>
-              </tr>
+               
         </table>
 </center><br>
         <button  onclick='myFunction()'>GO!</button>
